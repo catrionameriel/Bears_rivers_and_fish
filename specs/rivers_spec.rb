@@ -8,7 +8,8 @@ class TestRivers < MiniTest::Test
   def setup
     @fish1 = Fish.new("Bonnie")
     @fish2 = Fish.new("George")
-    @river = River.new("Clyde")
+    @fish = [@fish1, @fish2]
+    @river = River.new("Clyde", @fish)
   end
 
   def test_river_has_name
@@ -16,8 +17,8 @@ class TestRivers < MiniTest::Test
   end
 
   def test_how_many_fish
-    @river.add_fish_to_river(@fish1)
-    @river.add_fish_to_river(@fish2)
+    # @river.add_fish_to_river(@fish1)
+    # @river.add_fish_to_river(@fish2)
     assert_equal(2, @river.fish.count)
   end
 
