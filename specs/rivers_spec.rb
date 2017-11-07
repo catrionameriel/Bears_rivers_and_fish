@@ -18,7 +18,7 @@ class TestRivers < MiniTest::Test
   def test_how_many_fish
     @river.add_fish_to_river(@fish1)
     @river.add_fish_to_river(@fish2)
-    assert_equal(2, @fish.count)
+    assert_equal(2, @river.fish.count)
   end
 
 end
