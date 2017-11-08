@@ -11,4 +11,12 @@ class River
   #   @fish << fish
   # end
 
+  def fish_taken_from_river
+    @fish.pop
+  end
+
+  def fish_count
+    @fish.count
+  end
+
 end
